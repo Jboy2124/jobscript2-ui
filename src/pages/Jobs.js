@@ -7,10 +7,12 @@ import { axiosInstance } from '../config/axios'
 
 const Jobs = () => {
   const [data, setData] = useState([])
+  const [total, setTotal] = useState(0)
   const [offsetVar, setOffsetVar] = useState(0)
+  const limitVal = 4
 
   const queryParams = {
-    limit: 4,
+    limit: limitVal,
     offset: offsetVar
   }
 
@@ -22,7 +24,8 @@ const Jobs = () => {
     })
     .then(response => {
       setData(host => [...host, ...response.data.jobs])
-      setOffsetVar(val => val + 4)
+      setTotal(response.data.total)
+      setOffsetVar(val => val + limitVal)
     })
     .catch(error => {
       console.log(error)
@@ -33,7 +36,7 @@ const Jobs = () => {
     _loadData()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-
+ 
   return (
     <div className='bg-white'>
         <Navrbar />
@@ -46,6 +49,7 @@ const Jobs = () => {
                       return(
                         <div key={index}>
                           <JobSpecCard 
+                            jobID={items.id}
                             jobTitle={items.job} 
                             companyName={items.company}
                             city={items.city}
@@ -60,7 +64,7 @@ const Jobs = () => {
               <button 
                 type='button'
                 onClick={() => _loadData()}
-                className='px-32 py-3 bg-orange-600 shadow-lg hover:bg-orange-700 duration-300 rounded text-[15px] text-white font-poppins'>
+                className={`${ (offsetVar <= total[0]?.totalRows ) ? 'block' : 'hidden' }  px-32 py-3 bg-orange-600 shadow-lg hover:bg-orange-700 duration-300 rounded text-[15px] text-white font-poppins`}>
                   Load more...
               </button>
             </div>

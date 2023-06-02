@@ -11,7 +11,7 @@ const Navrbar = () => {
     //     }, 300)
     // }
   return (
-    <div className='bg-gradient-to-r from-[#0A2647] to-[#205295]'>
+    <div className='bg-gradient-to-r from-[#0A2647] to-[#205295] sticky top-0 z-50'>
         <div className='container mx-auto'>
             <div className='min-h-[80px] flex justify-between items-center'>
                 <div className='flex justify-start items-center space-x-16 text-[15px]'>

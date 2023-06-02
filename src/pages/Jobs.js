@@ -10,7 +10,7 @@ import Paginate from '../components/pagination/Paginate'
 const Jobs = () => {
   const[items, setItems] = useState([])
   const[totalPage, setTotalPage] = useState(0)
-  const itemPerPage = 3
+  const itemPerPage = 9
 
  
   async function _fetchData(currentPage){
@@ -53,7 +53,7 @@ const Jobs = () => {
         <Searchbar />
         <div className='container mx-auto'>
             <div className='min-h-screen flex justify-center items-center'>
-                <div className='grid grid-cols-2 gap-4 place-items-center py-14'>
+                <div className='grid grid-cols-3 gap-4 place-items-center py-14'>
                   {
                     items.map((items, index) => {
                       return(
@@ -71,12 +71,6 @@ const Jobs = () => {
                 </div>
             </div>
             <div className='flex justify-center items-center pb-10'>
-              {/* <button 
-                type='button'
-                onClick={() => _loadData()}
-                className={`${ (offsetVar <= total[0]?.totalRows ) ? 'block' : 'hidden' }  px-32 py-3 bg-orange-600 shadow-lg hover:bg-orange-700 duration-300 rounded text-[15px] text-white font-poppins`}>
-                  Load more...
-              </button> */}
               <Paginate 
                   totalPages={TotalPage}
                   handleSelectedPageClick={handlePageClick}

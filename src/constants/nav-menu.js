@@ -11,11 +11,16 @@ export const navMenu = [
     },
     {
         id: 3,
+        name: 'Careers',
+        link: '/careers'
+    },
+    {
+        id: 4,
         name: 'About Us',
         link: '/about-us'
     },
     {
-        id: 4,
+        id: 5,
         name: 'Contact Us',
         link: '/contact-us'
     }

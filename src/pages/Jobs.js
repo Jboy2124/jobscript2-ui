@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navrbar from '../components/navbar/Navrbar'
 import Footer from '../components/footer/Footer'
 import Searchbar from '../components/search/Searchbar'
 import JobSpecCard from '../components/cards/JobSpecCard'
+import { axiosInstance } from '../config/axios'
 
 const Jobs = () => {
+  const [data, setData] = useState([])
 
-  const sample = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, 16,17,18,19,20]
+  async function _loadData(){
+    await axiosInstance({
+      method: 'GET',
+      url: '/jobs'
+    })
+    .then(response => {
+      setData(response.data.jobs)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
+  useEffect(() => {
+    _loadData()
+  }, [])
+  
 
   return (
     <div className='bg-white'>
@@ -16,10 +34,10 @@ const Jobs = () => {
             <div className='min-h-screen flex justify-center items-center'>
                 <div className='grid grid-cols-2 gap-4 place-items-center py-14'>
                   {
-                    sample.map((items, index) => {
+                    data.map((items, index) => {
                       return(
                         <div key={index}>
-                          <JobSpecCard name={items} />
+                          <JobSpecCard name={items.company} />
                         </div>
                       )
                     })

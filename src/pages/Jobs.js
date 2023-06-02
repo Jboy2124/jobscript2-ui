@@ -7,14 +7,22 @@ import { axiosInstance } from '../config/axios'
 
 const Jobs = () => {
   const [data, setData] = useState([])
+  const [offsetVar, setOffsetVar] = useState(0)
+
+  const queryParams = {
+    limit: 4,
+    offset: offsetVar
+  }
 
   async function _loadData(){
     await axiosInstance({
       method: 'GET',
-      url: '/jobs'
+      url: '/jobs',
+      params: queryParams
     })
     .then(response => {
-      setData(response.data.jobs)
+      setData(host => [...host, ...response.data.jobs])
+      setOffsetVar(val => val + 4)
     })
     .catch(error => {
       console.log(error)
@@ -23,8 +31,8 @@ const Jobs = () => {
 
   useEffect(() => {
     _loadData()
-  }, [])
-  
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
 
   return (
     <div className='bg-white'>
@@ -37,7 +45,11 @@ const Jobs = () => {
                     data.map((items, index) => {
                       return(
                         <div key={index}>
-                          <JobSpecCard name={items.company} />
+                          <JobSpecCard 
+                            jobTitle={items.job} 
+                            companyName={items.company}
+                            city={items.city}
+                          />
                         </div>
                       )
                     })
@@ -45,7 +57,12 @@ const Jobs = () => {
                 </div>
             </div>
             <div className='flex justify-center items-center pb-10'>
-              <button type='button' className='px-32 py-3 bg-orange-600 rounded text-[15px] text-white font-poppins'>Load more...</button>
+              <button 
+                type='button'
+                onClick={() => _loadData()}
+                className='px-32 py-3 bg-orange-600 shadow-lg hover:bg-orange-700 duration-300 rounded text-[15px] text-white font-poppins'>
+                  Load more...
+              </button>
             </div>
         </div>
         <Footer />

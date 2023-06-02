@@ -6,7 +6,7 @@ const HeroPage = () => {
     <div className='relative bg-gradient-to-r from-[#0A2647] to-[#205295]'>
         <div className='container mx-auto'>
             <div className='min-h-[70vh] flex justify-center items-center'>
-                <div className='grid grid-rows-3 place-items-center'>
+                <div className='flex flex-col justify-center items-center space-y-4'>
                     <div className='text-[52px] text-white font-poppins font-bold'>Job hunting is never been this easy.</div>
                     <div className='text-white text-[16px] font-poppins'>No account?, No problem. Search job all you want.</div>
                     <div className='flex justify-center items-center z-10'>

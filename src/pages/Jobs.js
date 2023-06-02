@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Navrbar from '../components/navbar/Navrbar'
 import Footer from '../components/footer/Footer'
 import Searchbar from '../components/search/Searchbar'
 import JobSpecCard from '../components/cards/JobSpecCard'
 
 const Jobs = () => {
-  const [data, setData] = useState([])
+
   const sample = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, 16,17,18,19,20]
-
-  function loadData(){
-    setData(sample);
-  }
-
-  useEffect(() => {
-    loadData()
-  }, [])
 
   return (
     <div className='bg-white'>

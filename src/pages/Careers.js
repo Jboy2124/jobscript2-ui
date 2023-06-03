@@ -20,7 +20,8 @@ const Careers = () => {
   }
 
   useEffect(() => {
-    _loadData()
+    _loadData();
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [])
 
   return (

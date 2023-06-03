@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navrbar from '../components/navbar/Navrbar'
 import Footer from '../components/footer/Footer'
 import HeroPage from '../components/hero/HeroPage'
@@ -11,6 +11,15 @@ import JobseekerReviews from '../components/reviews/JobseekerReviews'
 
 
 const Homepage = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior:'smooth',
+    })
+  }, [])
+
   return (
     <div className='bg-white'>
         <Navrbar />

@@ -1,6 +1,5 @@
 import React from 'react'
-import {supportServices} from '../../constants/footer-menu'
-import { navMenu } from '../../constants/nav-menu'
+import {supportServices, supportMenu} from '../../constants/footer-menu'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Footer = () => {
@@ -42,7 +41,7 @@ const Footer = () => {
                   <div className='flex justify-start items-center space-x-16 text-white text-[13px] font-poppins'>
                     <ul className='space-y-1'>
                       {
-                        navMenu.map((item, index) => {
+                        supportMenu.map((item, index) => {
                           return(
                             <li  key={index} className='hover:underline underline-offset-4'>
                               <Link to={item.link}>{item.name}</Link>

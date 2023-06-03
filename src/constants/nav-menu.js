@@ -16,12 +16,12 @@ export const navMenu = [
     // },
     {
         id: 3,
-        name: 'About Us',
+        name: 'The Team',
         link: '/about-us'
     },
-    {
-        id: 4,
-        name: 'Contact Us',
-        link: '/contact-us'
-    }
+    // {
+    //     id: 4,
+    //     name: 'Contact Us',
+    //     link: '/contact-us'
+    // }
 ]

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Searchbar = () => {
   return (
-    <div className='bg-gray-200 shadow-sm sticky top-20 z-40'>
+    <div className='bg-gray-100 sticky top-20 z-40'>
         <div className='container mx-auto'>
             <div className='min-h-[70px] flex justify-center items-center'>
                 <div className='flex items-center w-[500px] bg-white px-2 py-[2px] rounded-full ring-1 ring-gray-300'>

@@ -37,6 +37,11 @@ const Jobs = () => {
 
   useEffect(() => {
     _fetchData()
+
+    window.scrollTo({
+      top: 55,
+      behavior: 'smooth'
+    })
   }, [])
 
 
@@ -51,7 +56,7 @@ const Jobs = () => {
         <Navrbar />
         <Searchbar />
         <div className='container mx-auto'>
-            <div className='min-h-screen flex justify-center items-center'>
+            <div className='min-h-[80vh] flex justify-center items-center'>
                 <div className='grid grid-cols-3 gap-4 place-items-center py-14'>
                   {
                     items.map((items, index) => {

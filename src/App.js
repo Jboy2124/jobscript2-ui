@@ -7,6 +7,7 @@ import Jobs from './pages/Jobs'
 import PostJobs from './pages/PostJobs'
 import Careers from './pages/Careers'
 
+
 const App = () => {
   return (
     <Router>

@@ -10,14 +10,14 @@ import Paginate from '../components/pagination/Paginate'
 const Jobs = () => {
   const[items, setItems] = useState([])
   const[totalPage, setTotalPage] = useState(0)
-  const itemPerPage = 9
+  const itemPerPage = 4
 
  
   async function _fetchData(currentPage){
 
     const queryParams = {
       limit: itemPerPage,
-      offset: parseInt(currentPage * itemPerPage)
+      offset: parseInt((isNaN(currentPage) ? 0 : currentPage) * itemPerPage)
     }
 
     await axiosInstance({

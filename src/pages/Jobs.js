@@ -17,7 +17,7 @@ const Jobs = () => {
 
     const queryParams = {
       limit: itemPerPage,
-      offset: currentPage * itemPerPage
+      offset: parseInt(currentPage * itemPerPage)
     }
 
     await axiosInstance({
@@ -46,7 +46,6 @@ const Jobs = () => {
 
   let TotalPage = Math.ceil((isNaN(totalPage[0]?.totalRows) ? 0 : totalPage[0]?.totalRows) / itemPerPage)
 
- 
   return (
     <div className='bg-white'>
         <Navrbar />

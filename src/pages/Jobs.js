@@ -10,7 +10,7 @@ import Paginate from '../components/pagination/Paginate'
 const Jobs = () => {
   const[items, setItems] = useState([])
   const[totalPage, setTotalPage] = useState(0)
-  const itemPerPage = 4
+  const itemPerPage = 6
 
  
   async function _fetchData(currentPage){

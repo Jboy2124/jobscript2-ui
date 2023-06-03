@@ -1,9 +1,29 @@
 import React from 'react'
 import {supportServices} from '../../constants/footer-menu'
 import { navMenu } from '../../constants/nav-menu'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+  const navigate = useNavigate()
+
+  function handleIndex(i){
+    switch(i){
+      case 0:
+        break;
+      case 1:
+        break;
+      case 2:
+        setTimeout(() => {
+          navigate('/careers')
+        }, 500)
+        break;
+      case 3:
+        break;
+      default:
+        return;
+    }
+  }
+
   return (
     <div className='relative bg-gradient-to-r from-[#0A2647] to-[#205295]'>
         {/* <svg className='absolute top-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fillOpacity="1" d="M0,0L80,10.7C160,21,320,43,480,90.7C640,139,800,213,960,229.3C1120,245,1280,203,1360,181.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> */}
@@ -19,7 +39,7 @@ const Footer = () => {
                 </div>
                 <div className='w-full flex flex-col items-center z-20'>
                   <div className='flex justify-center items-center text-white text-[25px] font-poppins pb-3'>Support</div>
-                  <div className='flex justify-center items-center space-x-16 text-white text-[13px] font-poppins'>
+                  <div className='flex justify-start items-center space-x-16 text-white text-[13px] font-poppins'>
                     <ul className='space-y-1'>
                       {
                         navMenu.map((item, index) => {
@@ -35,7 +55,12 @@ const Footer = () => {
                      {
                       supportServices.map((items, index) => {
                         return(
-                          <li key={index} className='hover:cursor-pointer hover:underline underline-offset-4'>{items}</li>
+                          <li 
+                            key={index} 
+                            onClick={() => handleIndex(index)}
+                            className='hover:cursor-pointer hover:underline underline-offset-4'>
+                              {items}
+                          </li>
                         )
                       })
                      }

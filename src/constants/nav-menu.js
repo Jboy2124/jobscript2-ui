@@ -9,18 +9,18 @@ export const navMenu = [
         name: 'Jobs',
         link: '/jobs'
     },
+    // {
+    //     id: 3,
+    //     name: 'Careers',
+    //     link: '/careers'
+    // },
     {
         id: 3,
-        name: 'Careers',
-        link: '/careers'
-    },
-    {
-        id: 4,
         name: 'About Us',
         link: '/about-us'
     },
     {
-        id: 5,
+        id: 4,
         name: 'Contact Us',
         link: '/contact-us'
     }

@@ -37,16 +37,20 @@ const Jobs = () => {
 
   useEffect(() => {
     _fetchData()
-
-    window.scrollTo({
-      top: 55,
-      behavior: 'smooth'
-    })
+    scrollToTop()
   }, [])
 
 
   function handlePageClick(currentPage){
     _fetchData(currentPage)
+    scrollToTop()
+  }
+
+  function scrollToTop(){
+    window.scrollTo({
+      top: 55,
+      behavior: 'smooth'
+    })
   }
 
   let TotalPage = Math.ceil((isNaN(totalPage[0]?.totalRows) ? 0 : totalPage[0]?.totalRows) / itemPerPage)

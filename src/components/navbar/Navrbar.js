@@ -4,14 +4,31 @@ import { Link } from 'react-router-dom'
 
 const Navrbar = () => {
 
-    // function postJobs(e){
-    //     e.preventDefault();
-    //     setTimeout(() => {
 
-    //     }, 300)
+    // const[prevScrollPos, setPrevScrollPos] = useState(0)
+    // const[visibility, setVisibility] = useState(true)
+
+
+    // function handleScroll(){
+    //     const currentScrollPos = window.scrollY
+
+    //     if(currentScrollPos > prevScrollPos){
+    //         setVisibility(false)
+    //     } else {
+    //         setVisibility(true)
+    //     }
+
+    //     setPrevScrollPos(currentScrollPos)
     // }
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll)
+    // })
+
+
   return (
-    <div className='bg-gradient-to-r from-[#0A2647] to-[#205295] sticky top-0 z-50'>
+    <div className={`bg-gradient-to-r from-[#0A2647] to-[#205295] sticky top-0 z-50`}>
         <div className='container mx-auto'>
             <div className='min-h-[80px] flex justify-between items-center'>
                 <div className='flex justify-start items-center space-x-16 text-[15px]'>

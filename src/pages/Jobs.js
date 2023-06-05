@@ -61,7 +61,7 @@ const Jobs = () => {
         <Searchbar />
         <div className='container mx-auto'>
             <div className='min-h-[80vh] flex justify-center items-center'>
-                <div className='grid grid-cols-3 gap-4 place-items-center py-14'>
+                <div className='grid grid-cols-3 gap-7 place-items-center py-14'>
                   {
                     items.map((items, index) => {
                       return(

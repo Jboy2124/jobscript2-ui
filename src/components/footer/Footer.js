@@ -1,6 +1,8 @@
 import React from 'react'
 import {supportServices, supportMenu} from '../../constants/footer-menu'
 import { Link, useNavigate } from 'react-router-dom'
+import SEC from '../../assets/certification-logo/SEC-logo.png'
+import ISO from '../../assets/certification-logo/ISO-Logo.png'
 
 const Footer = () => {
   const navigate = useNavigate()
@@ -69,12 +71,21 @@ const Footer = () => {
                 </div>
                <div className='w-full flex flex-col items-center z-30'>
                     <div className='text-white text-[25px] font-poppins'>Follow Us</div>
-                    <div className='flex justify-center items-center space-x-3'>
+                    <div className='flex justify-center items-center space-x-3 pb-3'>
                       <div className='text-[28px] text-white hover:text-orange-600 duration-200 hover:cursor-pointer'><ion-icon name="logo-facebook"></ion-icon></div>
                       <div className='text-[28px] text-white hover:text-orange-600 duration-200 hover:cursor-pointer'><ion-icon name="logo-instagram"></ion-icon></div>
                       <div className='text-[28px] text-white hover:text-orange-600 duration-200 hover:cursor-pointer'><ion-icon name="logo-twitter"></ion-icon></div>
                       <div className='text-[28px] text-white hover:text-orange-600 duration-200 hover:cursor-pointer'><ion-icon name="logo-youtube"></ion-icon></div>
                     </div>
+                    {/* <div className='text-white text-[24px] font-poppins'>Accredited</div> */}
+                    {/* <div className='flex justify-evenly items-center space-x-1'>
+                      <div className='w-36 h-20 flex justify-center items-center'>
+                        <img src={SEC} alt='SEC' />
+                      </div>
+                      <div className='w-36 h-20 flex justify-center items-center'>
+                        <img src={ISO} alt='ISO'/>
+                      </div>
+                    </div> */}
                </div>
             </div>
         </div>

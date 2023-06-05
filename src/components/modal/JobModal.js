@@ -19,9 +19,9 @@ const JobModal = (props) => {
                     onClose={onCloseModal}
                     animationDuration={500}
                     center={true}
-                    role='dialog'
+                    // role='dialog'
                     blockScroll={false}
-                    closeOnOverlayClick={false}
+                    closeOnOverlayClick={true}
                     focusTrapped={true}
 
                 >

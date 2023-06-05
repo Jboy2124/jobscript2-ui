@@ -1,8 +1,8 @@
 import React from 'react'
 import {supportServices, supportMenu} from '../../constants/footer-menu'
 import { Link, useNavigate } from 'react-router-dom'
-import SEC from '../../assets/certification-logo/SEC-logo.png'
-import ISO from '../../assets/certification-logo/ISO-Logo.png'
+// import SEC from '../../assets/certification-logo/SEC-logo.png'
+// import ISO from '../../assets/certification-logo/ISO-Logo.png'
 
 const Footer = () => {
   const navigate = useNavigate()
@@ -29,7 +29,7 @@ const Footer = () => {
     <div className='relative bg-gradient-to-r from-[#0A2647] to-[#205295]'>
         {/* <svg className='absolute top-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fillOpacity="1" d="M0,0L80,10.7C160,21,320,43,480,90.7C640,139,800,213,960,229.3C1120,245,1280,203,1360,181.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> */}
         <div className='container mx-auto'>
-            <div className='min-h-[40vh] flex justify-evenly items-start py-16'>
+            <div className='min-h-[30vh] flex justify-evenly items-start py-16'>
                 <div className='w-full flex flex-col justify-center items-center space-y-2'>
                  <div className='text-white text-[25px] font-poppins'>Newsletter</div>
                  <div className='text-white text-[13px] font-poppins'>Get the latest updates and trends</div>

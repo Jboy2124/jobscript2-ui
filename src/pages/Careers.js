@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navrbar from '../components/navbar/Navrbar'
 import Footer from '../components/footer/Footer'
 import { axiosInstance } from '../config/axios'
+import { scrollTop } from '../config/scroll-top'
 
 const Careers = () => {
   const[data, setData] = useState([])
@@ -21,7 +22,7 @@ const Careers = () => {
 
   useEffect(() => {
     _loadData();
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    scrollTop(0);
   }, [])
 
   return (

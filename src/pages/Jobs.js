@@ -5,6 +5,7 @@ import Searchbar from '../components/search/Searchbar'
 import JobSpecCard from '../components/cards/JobSpecCard'
 import { axiosInstance } from '../config/axios'
 import Paginate from '../components/pagination/Paginate'
+import { scrollTop } from '../config/scroll-top'
 
 
 const Jobs = () => {
@@ -14,7 +15,8 @@ const Jobs = () => {
 
  
   async function _fetchData(currentPage){
-
+    const controller = new AbortController();
+    
     const queryParams = {
       limit: itemPerPage,
       offset: parseInt((isNaN(currentPage) ? 0 : currentPage) * itemPerPage)
@@ -23,6 +25,7 @@ const Jobs = () => {
     await axiosInstance({
       method: 'GET',
       url: '/jobs',
+      signal: controller.signal,
       params: queryParams
     })
     .then(response => {
@@ -31,27 +34,27 @@ const Jobs = () => {
     })
     .catch(error => {
       console.log(error)
+      controller.abort()
     })
+
+    return () => {
+      controller.abort()
+    }
+
   }
 
 
   useEffect(() => {
-    _fetchData()
-    scrollToTop()
+    _fetchData(0)
+    scrollTop(75)
   }, [])
 
 
   function handlePageClick(currentPage){
     _fetchData(currentPage)
-    scrollToTop()
+    scrollTop(75)
   }
 
-  function scrollToTop(){
-    window.scrollTo({
-      top: 55,
-      behavior: 'smooth'
-    })
-  }
 
   let TotalPage = Math.ceil((isNaN(totalPage[0]?.totalRows) ? 0 : totalPage[0]?.totalRows) / itemPerPage)
 

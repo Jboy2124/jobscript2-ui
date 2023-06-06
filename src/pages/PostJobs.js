@@ -1,18 +1,13 @@
 import React, { useEffect } from 'react'
 import Navrbar from '../components/navbar/Navrbar'
 import Footer from '../components/footer/Footer'
+import { scrollTop } from '../config/scroll-top'
 
 
 const PostJobs = () => {
 
   useEffect(() => {
-    
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-
+    scrollTop(0)
   }, [])
 
   return (

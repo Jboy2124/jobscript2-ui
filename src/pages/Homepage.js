@@ -7,6 +7,7 @@ import CreateResume from '../components/create-resume/CreateResume'
 import Register from '../components/employers/Register'
 import JobType from '../components/job-types/JobType'
 import JobseekerReviews from '../components/reviews/JobseekerReviews'
+import { scrollTop } from '../config/scroll-top'
 
 
 
@@ -14,11 +15,12 @@ import JobseekerReviews from '../components/reviews/JobseekerReviews'
 const Homepage = () => {
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior:'smooth',
-    })
+    scrollTop(0)
+    console.log('running')
+
+    // return(() => {
+    //   console.log('cleaning')
+    // })
   }, [])
 
   return (

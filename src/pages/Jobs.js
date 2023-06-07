@@ -46,13 +46,13 @@ const Jobs = () => {
 
   useEffect(() => {
     _fetchData(0)
-    scrollTop(75)
+    scrollTop(65)
   }, [])
 
 
   function handlePageClick(currentPage){
     _fetchData(currentPage)
-    scrollTop(75)
+    scrollTop(65)
   }
 
 

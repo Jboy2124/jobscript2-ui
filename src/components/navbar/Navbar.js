@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className='min-h-[80px] flex justify-between items-center'>
                 <div className='flex justify-start items-center space-x-16 text-[15px]'>
                     <div className='text-white font-poppins text-[30px] font-bold'>Job<span className='text-orange-600'>Script</span>.io</div>
-                    <div className='text-[16px] text-white font-poppins flex items-center space-x-6'>
+                    <div className='text-[16px] text-white font-poppins flex items-center space-x-3'>
                         {
                             navMenu.map(items => {
                                 return (

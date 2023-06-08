@@ -6,7 +6,13 @@ const Register = () => {
         {/* <svg className='absolute top-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fillOpacity="1" d="M0,128L48,106.7C96,85,192,43,288,37.3C384,32,480,64,576,112C672,160,768,224,864,256C960,288,1056,288,1152,250.7C1248,213,1344,139,1392,101.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> */}
         <div className='container mx-auto'>
             <div className='min-h-[80vh] flex justify-evenly items-center'>
-                <div className='w-full text-[55px] text-center font-poppins'>We are <span className='text-orange-600 font-bold'>trusted</span> by most companies. <span className='text-orange-600 font-bold'>Advertise</span> with us.</div>
+                <div className='w-full text-[55px] text-center font-poppins'>We are 
+                    <span className='relative'>
+                        <span className='block absolute -inset-[-3px] -skew-y-[4deg] bg-orange-600 aria-hidden: true'></span>
+                        <span className='relative text-white px-2'>trusted</span>
+                    </span> 
+                        by most companies. Advertise with us.
+                </div>
                 <div className='w-full flex justify-center items-center'>
                     <div className='rounded w-[400px] h-[430px] ring-8 shadow-2xl ring-white bg-gradient-to-r from-[#0A2647] to-[#205295] pt-16 z-10'>
                         <div className='text-center text-white text-[22px] font-poppins pb-5'>Employers / Post Jobs</div>

@@ -12,17 +12,17 @@ const JobSpecCard = (props) => {
 
 
   return (
-    <div className='hover:bg-gradient-to-br from-gray-200 to-gray-100 ring-1 ring-gray-300 rounded duration-300'>
+    <div className='bg-gradient-to-br from-[#748DA6] to-[#D3CEDF] ring-2 ring-white hover:shadow-2xl duration-300 rounded'>
         <div className='h-[200px] w-[330px]'>
             <div className='w-full flex flex-col justify-center items-center py-4 px-2'>
-                <div className='text-[18px] font-poppins font-bold hover:text-orange-600 hover:underline hover:underline-offset-4 cursor-pointer' 
+                <div className='text-[18px] text-white font-poppins font-bold hover:text-orange-600 hover:underline hover:underline-offset-4 cursor-pointer' 
                      onClick={onOpenModal}
-                  >{ props.jobTitle } - { props.jobID }
+                  >{ props.jobTitle }
                 </div>
-                <div className='text-[14px] font-poppins'>{ props.companyName }</div>
-                <div className='text-[13px] font-poppins'>{ props.city }</div>
+                <div className='text-[14px] text-white font-poppins'>{ props.companyName }</div>
+                <div className='text-[13px] text-white font-poppins'>{ props.city }</div>
             </div>
-            <div className='flex justify-start items-center pt-10 px-5 space-x-2'>
+            <div className='flex justify-center items-center pt-10 px-5 space-x-2'>
                 <button type='button'
                         className='px-4 py-[6px] rounded bg-orange-600 hover:bg-orange-700 duration-200 text-white text-[13px] font-poppins'
                 >
@@ -31,9 +31,9 @@ const JobSpecCard = (props) => {
                 <button 
                   type='button'
                   onClick={onOpenModal}
-                  className='px-4 py-[6px] rounded ring-1 ring-gray-300 hover:bg-orange-600 duration-200 hover:text-white text-[13px] font-poppins'
+                  className='px-4 py-[6px] rounded ring-1 ring-orange-600 hover:bg-orange-600 duration-200 text-white text-[13px] font-poppins'
                   >
-                    View details
+                    Details
                 </button>
             </div>
         </div>

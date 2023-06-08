@@ -6,7 +6,7 @@ export const supportMenu =  [
     },
     {
         id: 2,
-        name: 'Jobs',
+        name: 'Find Jobs',
         link: '/jobs'
     },
     {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Navrbar from '../components/navbar/Navrbar'
+import Navbar from '../components/navbar/Navbar'
 import Footer from '../components/footer/Footer'
 import { axiosInstance } from '../config/axios'
 import { scrollTop } from '../config/scroll-top'
@@ -27,7 +27,7 @@ const Careers = () => {
 
   return (
     <div className='bg-white'>
-        <Navrbar />
+        <Navbar />
         <div className='container mx-auto'>
             <div className='min-h-screen flex justify-center items-center'>
                 <ul className='flex flex-col space-y-10'>

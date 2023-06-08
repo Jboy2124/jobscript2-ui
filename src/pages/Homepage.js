@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Navrbar from '../components/navbar/Navrbar'
+import Navbar from '../components/navbar/Navbar'
 import Footer from '../components/footer/Footer'
 import HeroPage from '../components/hero/HeroPage'
 import Certifiedby from '../components/certification/Certifiedby'
@@ -10,14 +10,10 @@ import JobseekerReviews from '../components/reviews/JobseekerReviews'
 import { scrollTop } from '../config/scroll-top'
 
 
-
-
 const Homepage = () => {
 
   useEffect(() => {
     scrollTop(0)
-    console.log('running')
-
     // return(() => {
     //   console.log('cleaning')
     // })
@@ -25,9 +21,8 @@ const Homepage = () => {
 
   return (
     <div className='bg-white'>
-        <Navrbar />
+        <Navbar />
         <HeroPage />
-        {/* <JobType /> */}
         <div className='container mx-auto'>
             <Certifiedby />
         </div>

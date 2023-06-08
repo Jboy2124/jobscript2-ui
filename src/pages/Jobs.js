@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Navrbar from '../components/navbar/Navrbar'
+import Navbar from '../components/navbar/Navbar'
 import Footer from '../components/footer/Footer'
 import Searchbar from '../components/search/Searchbar'
 import JobSpecCard from '../components/cards/JobSpecCard'
@@ -60,7 +60,7 @@ const Jobs = () => {
 
   return (
     <div className='relative bg-gray-100'>
-        <Navrbar />
+        <Navbar />
         <Searchbar />
         <svg className='absolute' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fillOpacity="1" d="M0,320L80,282.7C160,245,320,171,480,165.3C640,160,800,224,960,245.3C1120,267,1280,245,1360,234.7L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
         <div className='container mx-auto'>

@@ -37,7 +37,7 @@ const Navrbar = () => {
                         {
                             navMenu.map((items, index) => {
                                 return(
-                                    <li key={index} className='hover:text-[#EFEFEF] duration-200'>
+                                    <li key={index} className='hover:text-[#EFEFEF] duration-200 focus:text-red-500'>
                                         <Link to={items.link}>{ items.name }</Link>
                                     </li>
                                 )

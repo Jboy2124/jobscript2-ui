@@ -45,7 +45,7 @@ const Navbar = () => {
                                                 // 'px-3 py-2 rounded-md text-sm font-poppins no-underline ' + 
                                                 'px-3 py-2 rounded ' +
                                                 (isActive 
-                                                    ? 'ring-1 ring-orange-700'
+                                                    ? 'underline underline-offset-8'
                                                     : 'text-white'                                                     )
                                             )
                                         }}

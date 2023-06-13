@@ -70,8 +70,8 @@ const Careers = () => {
                           open={index === open}
                           toggle={() => toggle(index)}
                           job={item.job}
-                          primary={item.desc.primary}
-                          secondary={item.desc.secondary}
+                          desc={item?.desc}
+                          // secondary={item.desc.secondary}
                         />
                       )
                     })
